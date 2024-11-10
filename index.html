@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atelier Fazzy - 技術と便利ツールの工房</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-icon" onclick="location.href='index.html';"> 
+            <img src="Images/Home.png" alt="ホームアイコン" width="30" height="30"> 
+        </div>
+        <div>
+            <h1>Atelier Fazzy</h1>
+            <p>技術と便利ツールの工房へようこそ</p>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()"> 
+            <img src="Images/Menu.png" alt="メニューアイコン" width="30" height="30"> 
+        </div>
+    </header>
+    <main>
+        <img src="Images/Top.png" alt="Hero Image" class="hero-image">
+        <div class="menu" id="menu">
+            <button class="close-btn" onclick="toggleMenu()">✖️</button>
+            <!-- メニュー内容の追加が可能 -->
+        </div>
+        <div class="overlay"></div>
+        <section id="buttons" class="buttons">
+            <a href="https://x.com/kuraputi_ch9" class="button-link">ホームページ</a>
+            <a href="link2.html" class="button-link">自己紹介ページ</a>
+            <a href="link3.html" class="button-link">ツールページ</a>
+            <a href="link4.html" class="button-link">アドオンページ</a>
+        </section>
+        <section class="description">
+            <p>Atelier Fazzyは私の作ったコードやツール、データを共有するサイトです。<br>
+               主に統合版マインクラフトのアドオン制作に関連する便利なものをお届けします。<br>
+               私のアドオンの情報や一般公開なども行ってくので、ちょくちょく見に来てね～</p>
+        </section>
+        <!-- モーダルウィンドウの追加 -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <button class="close-btn" onclick="toggleModal()">✖️</button>
+                <h2>ツール選択</h2>
+                <ul>
+                    <li>
+                        <a href="tool1.html">KRPT-UniCoder</a>
+                        <p class="tool-description">jsonファイルを独自の暗号に変換します</p>
+                    </li>
+                    <li>
+                        <a href="tool2.html">KRPT-QueueChanger</a>
+                        <p class="tool-description">run_command と queue_command を変換します</p>
+                    </li>
+                    <li>
+                        <a href="tool3.html">???</a>
+                        <p class="tool-description">Coming Soon...</p>
+                    </li>
+                </ul>
+            </div>
+        </div>        
+    </main>
+    <footer>
+        <div class="footer-icons">
+            <img src="Images/kuraputi.jpg" alt="Footer Icon" class="footer-icon">
+        </div>
+        <div class="footer-links">
+            <a href="https://x.com/kuraputi_ch9" class="footer-link icon-x"></a>
+            <a href="https://youtube.com/@kuraputi?si=Zuau6kX7-kTgZGGH" class="footer-link icon-youtube"></a>
+            <a href="https://mcpedl.com/user/kuraputi/" class="footer-link icon-mcpedl"></a>
+            <a href="javascript:copyLink()" class="footer-link icon-copy"></a>
+        </div>
+        <p>&copy; 2024 Atelier Fazzy</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert("リンクがコピーされました！");
+            });
+        }
+    </script>
+</body>
+</html>
